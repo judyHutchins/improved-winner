@@ -25,4 +25,89 @@
               <p class="word" id="english-word">Loading...</p>
             </div>
             <div class="card-back">
-              <p class="word" id="spanish
+              <p class="word" id="spanish-word">-</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="btn btn-secondary" id="flip-btn">Flip Card</button>
+        <button class="btn btn-primary" id="speak-btn">🔊 Hear It</button>
+      </div>
+
+      <div class="recording-section">
+        <p class="instruction">Record your pronunciation:</p>
+        <button class="btn btn-record" id="record-btn">🎤 Record</button>
+        <div id="recording-status"></div>
+        <div id="feedback" class="feedback"></div>
+      </div>
+
+      <div class="nav-controls">
+        <button class="btn btn-nav" id="prev-btn">← Previous</button>
+        <span class="progress" id="progress">1 / 25</span>
+        <button class="btn btn-nav" id="next-btn">Next →</button>
+      </div>
+    </div>
+
+    <div class="tab-content" id="import">
+      <h2>Import Vocabulary</h2>
+      
+      <div class="import-method">
+        <h3>📋 Paste CSV Data</h3>
+        <textarea id="csv-input" placeholder="english,spanish&#10;hello,hola&#10;goodbye,adiós"></textarea>
+        <button class="btn btn-primary" id="import-csv-btn">Import CSV</button>
+      </div>
+
+      <div class="import-method">
+        <h3>📁 Upload CSV File</h3>
+        <input type="file" id="file-upload" accept=".csv">
+        <button class="btn btn-primary" id="upload-btn">Upload File</button>
+      </div>
+
+      <div class="import-method">
+        <h3>☁️ Google Drive URL</h3>
+        <input type="text" id="drive-url" placeholder="https://drive.google.com/file/d/...">
+        <button class="btn btn-primary" id="drive-btn">Import from Drive</button>
+      </div>
+
+      <div id="import-status" class="status"></div>
+    </div>
+
+    <div class="tab-content" id="dashboard">
+      <h2>📊 Progress Dashboard</h2>
+      
+      <div class="stats">
+        <div class="stat-card">
+          <h3 id="total-words">0</h3>
+          <p>Total Words</p>
+        </div>
+        <div class="stat-card">
+          <h3 id="mastered-words">0</h3>
+          <p>Mastered</p>
+        </div>
+        <div class="stat-card">
+          <h3 id="due-words">0</h3>
+          <p>Due for Review</p>
+        </div>
+        <div class="stat-card">
+          <h3 id="avg-score">0%</h3>
+          <p>Avg Accuracy</p>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-secondary" id="export-btn">Export Data</button>
+        <button class="btn btn-danger" id="reset-btn">Reset Progress</button>
+      </div>
+
+      <div class="word-list">
+        <h3>Vocabulary List</h3>
+        <div id="vocab-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html
